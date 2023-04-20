@@ -20,4 +20,28 @@ describe Solver do
       expect(solver.fizzbuzz(1)).to eq(1)
     end
   end
+
+  describe '#factorial' do
+    it 'return 6 on 3' do
+      expect(solver.factorial(3)).to eq(6)
+    end
+
+    it 'return 24 on 4' do
+      expect(solver.factorial(4)).to eq(24)
+    end
+
+    it 'return 1 on 0' do
+      expect(solver.factorial(0)).to eq(1)
+    end
+
+    it 'return exception error on negative number' do
+      expect { solver.factorial(-3) }.to raise_error(ArgumentError)
+    end
+  end
+
+  describe '#reverse' do
+    it 'returns olleh on hello' do
+      expect(solver.reverse('hello')).to eq('olleh')
+    end
+  end
 end
