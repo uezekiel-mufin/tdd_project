@@ -11,5 +11,13 @@ class Solver
     end
   end
 
+  def factorial(num)
+    raise ArgumentError, 'Number must be greater than 0' if num.negative?
 
+    num.zero? ? 1 : (1..num).inject(:*)
+  end
+
+  def reverse(str)
+    str.reverse
+  end
 end
